@@ -1,7 +1,17 @@
 <template>
-    <div class="canvas-container">
+     <div class="canvas-container">
+    <div class="center-box">
+  <!-- START Box -->
+  <div class="animated-border-box-glow"></div>
+  <div class="animated-border-box">
+   
       <canvas id="canvas1" ></canvas>
     </div>
+  
+  <!-- END -->
+</div>
+</div>
+   
     
 </template>
 
@@ -148,6 +158,17 @@ myImage.addEventListener('load', function(){
 </script>
 
 <style scoped>
+    .canvas-container {
+    height: 400px;
+    width: 300px;
+ 
+    position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+
+}
+
     #canvas1 {
         
         
@@ -178,5 +199,80 @@ myImage.addEventListener('load', function(){
             border-color: rgba(255, 0, 0, 0.527);
          }
       } */
+/*// Glow Border Animation //*/
+
+.animated-border-box, .animated-border-box-glow{
+  max-height: 384px;
+  max-width: 271px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden; 
+  z-index: 0;
+  /* Border Radius */
+	border-radius: 10px;
+}
+
+.animated-border-box-glow{
+  overflow: hidden;
+  /* Glow Blur */
+  filter: blur(20px);
+}
+
+.animated-border-box:before, .animated-border-box-glow:before {
+  content: '';
+  z-index: -2;
+  text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+	width: 99999px;
+	height: 99999px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+  /*border color, change middle color*/
+	background-image: conic-gradient(rgba(0,0,0,0), #1976ed, rgba(0,0,0,0) 25%);
+  /* change speed here */
+	animation: rotate 4s linear infinite;
+}
+
+.animated-border-box:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+  /* border width */
+	left: 5px;
+	top: 5px;
+  /* double the px from the border width left */
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+  /*bg color*/
+	/* background: #292a2e; */
+  /*box border radius*/
+	border-radius: 7px;
+}
+
+@keyframes rotate {
+	100% {
+		transform: translate(-50%, -50%) rotate(1turn);
+	}
+}
+
+/*// Border Animation END//*/
+
+
+
+/*// Ignore This //*/
+body {
+  margin: 0px;
+}
+
+.center-box{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 </style>
