@@ -159,8 +159,9 @@ myImage.addEventListener('load', function(){
 
 <style scoped>
     .canvas-container {
-    height: 400px;
-    width: 300px;
+    height: 380px;
+    width: 267px;
+    border: black solid 2px;
  
     position: absolute;
         top: 50%;
@@ -232,7 +233,7 @@ myImage.addEventListener('load', function(){
 	background-repeat: no-repeat;
 	background-position: 0 0;
   /*border color, change middle color*/
-	background-image: conic-gradient(rgba(0,0,0,0), #1976ed, rgba(0,0,0,0) 25%);
+	background-image: conic-gradient(rgba(0,0,0,0), #f39c12, rgba(0,0,0,0) 25%);
   /* change speed here */
 	animation: rotate 4s linear infinite;
 }
