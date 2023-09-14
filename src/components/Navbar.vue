@@ -35,7 +35,8 @@
   background-color: transparent;
   /* #18181b */
   padding: 1.3rem 0;
-  margin: 0.37rem;
+  margin: 0 1.3rem;
+  margin-top: 1.6rem
   
 }
 
@@ -58,7 +59,7 @@
   margin: 0 15px;
   position: relative;
   transition: color 0.3s;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .nav-link i {

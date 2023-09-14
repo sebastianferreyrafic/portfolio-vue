@@ -73,6 +73,8 @@
     
   }
   h1 {
+    margin-left:3.8rem;
+    margin-top: 4.2rem;
     color: white;
     font-size: 2rem;
     font-family: 'Josefin Sans', sans-serif;

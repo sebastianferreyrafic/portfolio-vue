@@ -17,7 +17,7 @@ export default {
         
       <!-- <Saludo /> -->
         <Maquina />
-        <h2 class="text-white text-xl ml-6">Acerca de mi</h2>
+       
         <Rain />
     </div>
   </template>

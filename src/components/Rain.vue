@@ -161,6 +161,7 @@ myImage.addEventListener('load', function () {
 }
 @keyframes show {
   0% {opacity:0%;}
+  
   100% {opacity:100%;}
 }
 
@@ -222,7 +223,7 @@ myImage.addEventListener('load', function () {
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     /*bg color*/
-    /* background: #292a2e; */
+    background: #292a2e;
     /*box border radius*/
     border-radius: 7px;
 }
@@ -244,3 +245,8 @@ body {
     margin: 0px;
 }
 </style>
+
+.center-box{
+  
+  background-color: #1D1E22;
+}
