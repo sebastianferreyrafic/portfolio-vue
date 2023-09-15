@@ -192,8 +192,7 @@ myImage.addEventListener('load', function () {
     filter: blur(20px);
 }
 
-.animated-border-box:before,
-.animated-border-box-glow:before {
+.animated-border-box:before, .animated-border-box-glow:before {
     content: '';
     z-index: -2;
     text-align: center;
@@ -206,7 +205,7 @@ myImage.addEventListener('load', function () {
     background-repeat: no-repeat;
     background-position: 0 0;
     /*border color, change middle color*/
-    background-image: conic-gradient(rgba(0, 0, 0, 0), #f39c12, rgba(0, 0, 0, 0) 25%);
+    background-image: conic-gradient(rgba(0, 0, 0, 0), #f39c12, rgba(0, 0, 0, 0) 20%);
     /* change speed here */
     animation: rotate 4s linear infinite;
     
@@ -244,9 +243,9 @@ myImage.addEventListener('load', function () {
 body {
     margin: 0px;
 }
-</style>
-
-.center-box{
+/* .center-box{
   
   background-color: #1D1E22;
-}
+} */
+</style>
+
